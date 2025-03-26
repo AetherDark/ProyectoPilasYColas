@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador de Cola Bancaria</title>
+    <link rel="stylesheet" href="../css/bank-queue.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="../index.html" class="back-button">← Volver al Menú</a>
+            <h1>Simulador de Cola Bancaria</h1>
+        </div>
+        
+        <div class="controls">
+            <div class="customer-type">
+                <label>
+                    <input type="radio" name="type" value="P" checked> Premium
+                </label>
+                <label>
+                    <input type="radio" name="type" value="C"> Regular
+                </label>
+                <label>
+                    <input type="radio" name="type" value="N"> Sin Cuenta
+                </label>
+            </div>
+            <button id="addCustomer">Agregar Cliente</button>
+            <button id="serveCustomer">Atender Cliente</button>
+        </div>
+
+        <div class="bank-visualization">
+            <div class="teller-window">
+                <h3>Ventanilla</h3>
+                <div id="currentCustomer"></div>
+            </div>
+            
+            <div class="queue-container">
+                <h3>Cola de Espera</h3>
+                <div id="queue" class="queue"></div>
+            </div>
+        </div>
+
+        <div class="statistics">
+            <h3>Estadísticas</h3>
+            <div id="stats"></div>
+        </div>
+    </div>
+    <script src="PriorityQueue.js"></script>
+    <script src="bank-queue.js"></script>
+</body>
+</html>
